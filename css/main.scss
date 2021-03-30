@@ -1,0 +1,31 @@
+@import "reset";
+
+/* Start variables */
+$text__bodyCopy: hsl(207, 13%, 34%);
+$text__cta: hsl(356, 100%, 66%);
+$text__footer: hsl(240, 2%, 79%);
+$text__heading: hsl(208, 49%, 24%);
+$text__white: hsl(0, 0%, 100%);
+$bg__ctaHover: hsl(355, 100%, 74%);
+$bg__footer: hsl(240, 10%, 16%);
+$bg__grad__footer: linear-gradient(
+  90deg,
+  hsl(237, 17%, 21%),
+  hsl(237, 23%, 32%)
+);
+$bg__grad__introCta: linear-gradient(
+  90deg,
+  hsl(13, 100%, 72%),
+  hsl(353, 100%, 62%)
+);
+
+@mixin mobile {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+/* End variables */
+
+html {
+  font-size: 100%;
+}
