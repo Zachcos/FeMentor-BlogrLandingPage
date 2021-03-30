@@ -143,4 +143,115 @@ html {
   font-size: 100%;
   font-weight: 300;
 }
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 140px;
+  width: 1400px;
+}
+
+.btn {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 137px;
+}
+
+.btn--primary {
+  background: white;
+  color: #ff525d;
+}
+
+#hero {
+  background: url("/images/bg-pattern-intro.svg") no-repeat, -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: url("/images/bg-pattern-intro.svg") no-repeat, linear-gradient(90deg, #ff8f70, #ff3d54);
+  background-position: bottom 46% left 25%;
+  background-size: 210%, contain;
+  border-radius: 0 0 0 100px;
+  width: 100%;
+}
+
+#hero .topbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 150px;
+  padding-top: 65px;
+}
+
+#hero .topbar .nav {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 4%;
+  width: 350px;
+}
+
+#hero .topbar .nav__item__heading {
+  color: white;
+  opacity: 0.8;
+  position: relative;
+}
+
+#hero .topbar .nav__item__heading:after {
+  background: url("/images/icon-arrow-light.svg") no-repeat;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: -20px;
+  top: 6px;
+  width: 10px;
+}
+
+#hero .topbar .nav__item__heading:hover {
+  cursor: pointer;
+}
+
+#hero .topbar .nav__item__dropdown {
+  display: none;
+}
+
+#hero .topbar .account {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+#hero .topbar .account .btn--no {
+  margin-right: 30px;
+  opacity: 0.8;
+}
+
+#future,
+#phones,
+#laptop,
+#footer {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

@@ -19,6 +19,16 @@ $bg__grad__introCta: linear-gradient(
   hsl(353, 100%, 62%)
 );
 
+@mixin font__ubuntu($weight) {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin font__overpass($weight) {
+  font-family: "Overpass", sans-serif;
+  font-weight: $weight;
+}
+
 @mixin mobile {
   @media screen and (max-width: 1000px) {
     @content;
@@ -30,4 +40,85 @@ html {
   font-family: "Overpass", sans-serif;
   font-size: 100%;
   font-weight: 300;
+}
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 140px;
+  width: 1400px;
+}
+.btn {
+  @include font__overpass(600);
+  align-items: center;
+  padding-top: 2px;
+  border-radius: 30px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  width: 137px;
+  &--primary {
+    background: $text__white;
+    color: $text__cta;
+  }
+}
+
+#hero {
+  background: url("/images/bg-pattern-intro.svg") no-repeat, $bg__grad__introCta;
+  background-position: bottom 46% left 25%;
+  background-size: 210%, contain;
+  border-radius: 0 0 0 100px;
+  width: 100%;
+  .topbar {
+    align-items: center;
+    display: flex;
+    margin-bottom: 150px;
+    padding-top: 65px;
+    .nav {
+      @include font__ubuntu(500);
+      display: flex;
+      justify-content: space-around;
+      margin-left: 4%;
+      width: 350px;
+      &__item__heading {
+        color: $text__white;
+        opacity: 0.8;
+        position: relative;
+        &:after {
+          background: url("/images/icon-arrow-light.svg") no-repeat;
+          content: "";
+          height: 10px;
+          position: absolute;
+          right: -20px;
+          top: 6px;
+          width: 10px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__item__dropdown {
+        display: none;
+      }
+    }
+    .account {
+      @include font__overpass(600);
+      align-items: center;
+      color: $text__white;
+      display: flex;
+      margin-left: auto;
+      & .btn--no {
+        margin-right: 30px;
+        opacity: 0.8;
+      }
+    }
+  }
+  .cta {
+  }
+}
+
+#future,
+#phones,
+#laptop,
+#footer {
+  display: none;
 }
