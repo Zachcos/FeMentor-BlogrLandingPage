@@ -139,6 +139,8 @@ table {
 /* Start variables */
 /* End variables */
 html {
+  font-family: "Overpass", sans-serif;
   font-size: 100%;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */
