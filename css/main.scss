@@ -42,23 +42,26 @@ html {
   font-weight: 300;
 }
 .content {
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 140px;
-  width: 1400px;
+  max-width: 1440px;
+  padding: 0 10%;
 }
 .btn {
   @include font__overpass(600);
   align-items: center;
-  padding-top: 2px;
   border-radius: 30px;
+  cursor: pointer;
   display: flex;
   height: 48px;
   justify-content: center;
+  padding-top: 2px;
   width: 137px;
   &--primary {
     background: $text__white;
     color: $text__cta;
+  }
+  &--secondary {
+    border: 1px solid $text__white;
   }
 }
 
@@ -71,7 +74,7 @@ html {
   .topbar {
     align-items: center;
     display: flex;
-    margin-bottom: 150px;
+    margin-bottom: 125px;
     padding-top: 65px;
     .nav {
       @include font__ubuntu(500);
@@ -113,6 +116,28 @@ html {
     }
   }
   .cta {
+    align-items: center;
+    color: $text__white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 175px;
+    &__tagline {
+      @include font__overpass(600);
+      font-size: 3.75rem;
+      margin-bottom: 20px;
+    }
+    &__subline {
+      @include font__overpass(300);
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      opacity: 0.8;
+    }
+    &__buttons {
+      display: flex;
+      & .btn:first-child {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
