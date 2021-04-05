@@ -190,6 +190,10 @@ html {
   color: #ff525d;
 }
 
+.btn--no {
+  cursor: pointer;
+}
+
 #hero {
   background: url("/images/bg-pattern-intro.svg") no-repeat, -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background: url("/images/bg-pattern-intro.svg") no-repeat, linear-gradient(90deg, #ff8f70, #ff3d54);

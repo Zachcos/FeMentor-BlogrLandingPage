@@ -72,6 +72,9 @@ html {
       color: $text__cta;
     }
   }
+  &--no {
+    cursor: pointer;
+  }
 }
 
 #hero {
