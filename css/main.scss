@@ -55,13 +55,22 @@ html {
   height: 48px;
   justify-content: center;
   padding-top: 2px;
+  transition: all 0.15s ease-out;
   width: 137px;
   &--primary {
     background: $text__white;
     color: $text__cta;
+    &:hover {
+      background: $bg__ctaHover;
+      color: $text__white;
+    }
   }
   &--secondary {
     border: 1px solid $text__white;
+    &:hover {
+      background: $text__white;
+      color: $text__cta;
+    }
   }
 }
 

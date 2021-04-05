@@ -166,6 +166,8 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 2px;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
   width: 137px;
 }
 
@@ -174,8 +176,18 @@ html {
   color: #ff525d;
 }
 
+.btn--primary:hover {
+  background: #ff7a85;
+  color: white;
+}
+
 .btn--secondary {
   border: 1px solid white;
+}
+
+.btn--secondary:hover {
+  background: white;
+  color: #ff525d;
 }
 
 #hero {
