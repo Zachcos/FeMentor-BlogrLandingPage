@@ -94,9 +94,13 @@ html {
       justify-content: space-around;
       margin-left: 4%;
       width: 350px;
+      &__item {
+        position: relative;
+      }
       &__item__heading {
         color: $text__white;
         opacity: 0.8;
+        padding-bottom: 40px;
         position: relative;
         &:after {
           background: url("/images/icon-arrow-light.svg") no-repeat;
@@ -106,13 +110,31 @@ html {
           right: -20px;
           top: 6px;
           width: 10px;
+          transition: all 0.15s ease-out;
         }
         &:hover {
           cursor: pointer;
         }
       }
       &__item__dropdown {
+        background: $text__white;
+        border-radius: 6px;
         display: none;
+        padding: 35px 50px 35px 25px;
+        position: absolute;
+        z-index: 10;
+        &--option {
+          @include font__ubuntu(400);
+          font-size: 0.9rem;
+          width: 100px;
+          &:hover {
+            cursor: pointer;
+            font-weight: 700;
+          }
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
       }
     }
     .account {

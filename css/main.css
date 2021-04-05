@@ -226,9 +226,14 @@ html {
   width: 350px;
 }
 
+#hero .topbar .nav__item {
+  position: relative;
+}
+
 #hero .topbar .nav__item__heading {
   color: white;
   opacity: 0.8;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -240,6 +245,8 @@ html {
   right: -20px;
   top: 6px;
   width: 10px;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
 
 #hero .topbar .nav__item__heading:hover {
@@ -247,7 +254,28 @@ html {
 }
 
 #hero .topbar .nav__item__dropdown {
+  background: white;
+  border-radius: 6px;
   display: none;
+  padding: 35px 50px 35px 25px;
+  position: absolute;
+  z-index: 10;
+}
+
+#hero .topbar .nav__item__dropdown--option {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  width: 100px;
+}
+
+#hero .topbar .nav__item__dropdown--option:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#hero .topbar .nav__item__dropdown--option:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 #hero .topbar .account {
