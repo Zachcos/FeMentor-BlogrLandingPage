@@ -230,6 +230,10 @@ html {
   position: relative;
 }
 
+#hero .topbar .nav__item:hover > .nav__item__dropdown {
+  display: block;
+}
+
 #hero .topbar .nav__item__heading {
   color: white;
   opacity: 0.8;

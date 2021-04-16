@@ -96,6 +96,11 @@ html {
       width: 350px;
       &__item {
         position: relative;
+        &:hover {
+          & > .nav__item__dropdown {
+            display: block;
+          }
+        }
       }
       &__item__heading {
         color: $text__white;
