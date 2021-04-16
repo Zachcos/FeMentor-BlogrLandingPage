@@ -8,7 +8,7 @@ $text__heading: hsl(208, 49%, 24%);
 $text__white: hsl(0, 0%, 100%);
 $bg__ctaHover: hsl(355, 100%, 74%);
 $bg__footer: hsl(240, 10%, 16%);
-$bg__grad__footer: linear-gradient(
+$bg__grad__phones: linear-gradient(
   90deg,
   hsl(237, 17%, 21%),
   hsl(237, 23%, 32%)
@@ -221,16 +221,58 @@ html {
     }
   }
   .graphic {
+    max-width: 900px;
     position: absolute;
     right: -285px;
     top: 100px;
-    width: 65%;
+    // width: 65%;
     img {
       width: 100%;
     }
   }
 }
-#phones,
+#phones {
+  background: url("/images/bg-pattern-circles.svg") no-repeat, $bg__grad__phones;
+  background-position: top 80% left -210px, center center;
+  background-size: 70%, 100%;
+  border-radius: 0 100px 0 100px;
+  height: 400px;
+  margin-top: 200px;
+  position: relative;
+  width: 100%;
+  .content {
+    display: flex;
+  }
+  .graphic {
+    position: relative;
+    top: -70px;
+    max-width: 550px;
+    img {
+      width: 100%;
+    }
+  }
+  .perk {
+    color: $text__white;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    margin-left: 50px;
+    width: 50%;
+    &--title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    &--details {
+      line-height: 2rem;
+      font-weight: 200;
+      letter-spacing: 0.5px;
+      width: 95%;
+    }
+  }
+}
+
 #laptop,
 #footer {
   display: none;
