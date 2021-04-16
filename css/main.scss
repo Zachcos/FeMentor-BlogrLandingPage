@@ -40,6 +40,7 @@ html {
   font-family: "Overpass", sans-serif;
   font-size: 100%;
   font-weight: 300;
+  overflow-x: hidden;
 }
 .content {
   margin: 0 auto;
@@ -185,7 +186,50 @@ html {
   }
 }
 
-#future,
+#future {
+  position: relative;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title {
+    color: $text__heading;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 150px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .perks {
+    width: 47%;
+    .perk {
+      &:nth-child(2) {
+        margin-top: 55px;
+      }
+      &--title {
+        color: $text__heading;
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 35px;
+      }
+      &--details {
+        color: $text__bodyCopy;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 2rem;
+      }
+    }
+  }
+  .graphic {
+    position: absolute;
+    right: -285px;
+    top: 100px;
+    width: 65%;
+    img {
+      width: 100%;
+    }
+  }
+}
 #phones,
 #laptop,
 #footer {
