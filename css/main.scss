@@ -102,6 +102,23 @@ html {
         }
       }
     }
+    .navContainer {
+      align-items: center;
+      display: flex;
+      width: 100%;
+      @include mobile {
+        background: $text__white;
+        border-radius: 6px;
+        flex-direction: column;
+        height: 500px;
+        left: 0;
+        margin: 150px 4vw 0;
+        position: absolute;
+        top: 0;
+        width: 92vw;
+        z-index: 10;
+      }
+    }
     .nav {
       @include font__ubuntu(500);
       display: flex;
@@ -110,11 +127,38 @@ html {
       margin-left: 4%;
       width: 350px;
       @include mobile {
-        display: none;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.25rem;
+        height: auto;
+        margin-left: 0;
+        margin-top: 50px;
       }
       &__item {
         position: relative;
+        @include mobile {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
         &:hover {
+          & > .nav__item__heading:after {
+            transform: rotate(180deg);
+            top: 3px;
+            @include mobile {
+              transform: none;
+              top: 6px;
+            }
+          }
+          & > .nav__item__dropdown {
+            display: block;
+            @include mobile {
+              display: none;
+            }
+          }
+        }
+        &.show {
           & > .nav__item__heading:after {
             transform: rotate(180deg);
             top: 3px;
@@ -129,6 +173,10 @@ html {
         opacity: 0.8;
         padding-bottom: 40px;
         position: relative;
+        @include mobile {
+          color: $text__heading;
+          width: 25%;
+        }
         &:after {
           background: url("/images/icon-arrow-light.svg") no-repeat;
           content: "";
@@ -138,6 +186,9 @@ html {
           top: 6px;
           width: 10px;
           transition: all 0.15s ease-out;
+          @include mobile {
+            background: url("/images/icon-arrow-dark.svg") no-repeat;
+          }
         }
         &:hover {
           cursor: pointer;
@@ -160,6 +211,20 @@ html {
           }
           &:not(:last-child) {
             margin-bottom: 20px;
+          }
+        }
+        @include mobile {
+          background: $text__footer;
+          margin-bottom: 40px;
+          opacity: 0.8;
+          padding: 25px 0;
+          position: relative;
+          text-align: center;
+          width: 90%;
+          &--option {
+            color: $text__heading;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
       }
@@ -194,6 +259,7 @@ html {
         display: flex;
         flex-wrap: wrap;
         font-size: 2rem;
+        justify-content: center;
         span {
           margin-bottom: 5px;
           width: 100%;
