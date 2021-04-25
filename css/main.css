@@ -614,10 +614,35 @@ html {
   width: 30%;
 }
 
+@media screen and (max-width: 1000px) {
+  #laptop .graphic {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
 #laptop .graphic img {
   left: -415px;
   position: relative;
   top: -100px;
+}
+
+#laptop .graphic img.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #laptop .graphic img.desktop {
+    display: none;
+  }
+  #laptop .graphic img.mobile {
+    display: block;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateX(-18%);
+            transform: translateX(-18%);
+    width: 160%;
+  }
 }
 
 #laptop .perks {
@@ -625,8 +650,21 @@ html {
   width: 47%;
 }
 
+@media screen and (max-width: 1000px) {
+  #laptop .perks {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 #laptop .perks .perk:nth-child(2) {
   margin-top: 55px;
+}
+
+@media screen and (max-width: 1000px) {
+  #laptop .perks .perk:nth-child(2) {
+    margin-bottom: 100px;
+  }
 }
 
 #laptop .perks .perk--title {

@@ -363,18 +363,44 @@ html {
     margin-right: 23%;
     position: relative;
     width: 30%;
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+    }
     img {
       left: -415px;
       position: relative;
       top: -100px;
+      &.mobile {
+        display: none;
+      }
+      @include mobile {
+        &.desktop {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+          left: 0;
+          top: 0;
+          transform: translateX(-18%);
+          width: 160%;
+        }
+      }
     }
   }
   .perks {
     margin-top: 70px;
     width: 47%;
+    @include mobile {
+      text-align: center;
+      width: 100%;
+    }
     .perk {
       &:nth-child(2) {
         margin-top: 55px;
+        @include mobile {
+          margin-bottom: 100px;
+        }
       }
       &--title {
         color: $text__heading;
