@@ -68,6 +68,14 @@ html {
       background: $bg__ctaHover;
       color: $text__white;
     }
+    @include mobile {
+      background: $bg__grad__introCta;
+      color: $text__white;
+      &:hover {
+        background: $bg__grad__introCta;
+        color: $text__white;
+      }
+    }
   }
   &--secondary {
     border: 1px solid $text__white;
@@ -110,13 +118,15 @@ html {
         background: $text__white;
         border-radius: 6px;
         flex-direction: column;
-        height: 500px;
         left: 0;
         margin: 150px 4vw 0;
         position: absolute;
         top: 0;
         width: 92vw;
         z-index: 10;
+        -webkit-box-shadow: 0px 0px 30px 0px rgba(37, 37, 45, 0.4);
+        -moz-box-shadow: 0px 0px 30px 0px rgba(37, 37, 45, 0.4);
+        box-shadow: 0px 0px 30px 0px rgba(37, 37, 45, 0.4);
       }
     }
     .nav {
@@ -238,9 +248,17 @@ html {
       & .btn--no {
         margin-right: 30px;
         opacity: 0.8;
+        @include mobile {
+          color: $text__heading;
+          font-size: 1.25rem;
+          margin: 25px 0;
+        }
       }
       @include mobile {
-        display: none;
+        flex-direction: column;
+        border-top: 2px solid hsla(240, 2%, 79%, 0.7);
+        width: 90%;
+        margin: 0 auto 50px;
       }
     }
   }
