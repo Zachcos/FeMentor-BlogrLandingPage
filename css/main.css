@@ -215,6 +215,20 @@ html {
   padding-top: 65px;
 }
 
+#hero .topbar .nav__mobileBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #hero .topbar .nav__mobileBtn {
+    display: block;
+    margin-left: auto;
+  }
+  #hero .topbar .nav__mobileBtn:hover {
+    cursor: pointer;
+  }
+}
+
 #hero .topbar .nav {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -226,6 +240,12 @@ html {
       justify-content: space-around;
   margin-left: 4%;
   width: 350px;
+}
+
+@media screen and (max-width: 1000px) {
+  #hero .topbar .nav {
+    display: none;
+  }
 }
 
 #hero .topbar .nav__item {
@@ -308,6 +328,12 @@ html {
   opacity: 0.8;
 }
 
+@media screen and (max-width: 1000px) {
+  #hero .topbar .account {
+    display: none;
+  }
+}
+
 #hero .cta {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -321,6 +347,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 175px;
+  text-align: center;
 }
 
 #hero .cta__tagline {
@@ -330,12 +357,33 @@ html {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  #hero .cta__tagline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 2rem;
+  }
+  #hero .cta__tagline span {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 #hero .cta__subline {
   font-family: "Overpass", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   margin-bottom: 40px;
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1000px) {
+  #hero .cta__subline {
+    line-height: 1.5rem;
+  }
 }
 
 #hero .cta__buttons {

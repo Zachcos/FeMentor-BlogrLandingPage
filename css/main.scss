@@ -89,6 +89,16 @@ html {
     display: flex;
     margin-bottom: 125px;
     padding-top: 65px;
+    .nav__mobileBtn {
+      display: none;
+      @include mobile {
+        display: block;
+        margin-left: auto;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
     .nav {
       @include font__ubuntu(500);
       display: flex;
@@ -96,6 +106,9 @@ html {
       justify-content: space-around;
       margin-left: 4%;
       width: 350px;
+      @include mobile {
+        display: none;
+      }
       &__item {
         position: relative;
         &:hover {
@@ -158,6 +171,9 @@ html {
         margin-right: 30px;
         opacity: 0.8;
       }
+      @include mobile {
+        display: none;
+      }
     }
   }
   .cta {
@@ -166,16 +182,29 @@ html {
     display: flex;
     flex-direction: column;
     padding-bottom: 175px;
+    text-align: center;
     &__tagline {
       @include font__overpass(600);
       font-size: 3.75rem;
       margin-bottom: 20px;
+      @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        span {
+          margin-bottom: 5px;
+          width: 100%;
+        }
+      }
     }
     &__subline {
       @include font__overpass(300);
       font-size: 1.2rem;
       margin-bottom: 40px;
       opacity: 0.8;
+      @include mobile {
+        line-height: 1.5rem;
+      }
     }
     &__buttons {
       display: flex;
