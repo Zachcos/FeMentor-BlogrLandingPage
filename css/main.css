@@ -151,6 +151,12 @@ html {
   padding: 0 10%;
 }
 
+@media screen and (max-width: 1000px) {
+  .content {
+    padding: 0 8%;
+  }
+}
+
 .btn {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -417,8 +423,26 @@ html {
   width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  #future .title {
+    font-size: 1.75rem;
+    margin: 150px 0 50px;
+  }
+}
+
 #future .perks {
   width: 47%;
+}
+
+@media screen and (max-width: 1000px) {
+  #future .perks {
+    margin-top: 50px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: auto;
+    text-align: center;
+  }
 }
 
 #future .perks .perk:nth-child(2) {
@@ -448,6 +472,30 @@ html {
 
 #future .graphic img {
   width: 100%;
+}
+
+#future .graphic img.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #future .graphic img.desktop {
+    display: none;
+  }
+  #future .graphic img.mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #future .graphic {
+    left: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: relative;
+    top: 0;
+  }
 }
 
 #phones {

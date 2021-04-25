@@ -46,6 +46,9 @@ html {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 10%;
+  @include mobile {
+    padding: 0 8%;
+  }
 }
 .btn {
   @include font__overpass(600);
@@ -228,9 +231,19 @@ html {
     margin: 150px 0;
     text-align: center;
     width: 100%;
+    @include mobile {
+      font-size: 1.75rem;
+      margin: 150px 0 50px;
+    }
   }
   .perks {
     width: 47%;
+    @include mobile {
+      margin-top: 50px;
+      order: 2;
+      width: auto;
+      text-align: center;
+    }
     .perk {
       &:nth-child(2) {
         margin-top: 55px;
@@ -254,9 +267,25 @@ html {
     position: absolute;
     right: -285px;
     top: 100px;
-    // width: 65%;
     img {
       width: 100%;
+      &.mobile {
+        display: none;
+      }
+      @include mobile {
+        &.desktop {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+        }
+      }
+    }
+    @include mobile {
+      left: 0;
+      order: 1;
+      position: relative;
+      top: 0;
     }
   }
 }
