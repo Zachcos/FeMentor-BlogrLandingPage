@@ -460,8 +460,104 @@ html {
   width: 95%;
 }
 
-#laptop,
+#laptop {
+  margin-top: 200px;
+  position: relative;
+}
+
+#laptop .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#laptop .graphic {
+  margin-right: 23%;
+  position: relative;
+  width: 30%;
+}
+
+#laptop .graphic img {
+  left: -415px;
+  position: relative;
+  top: -100px;
+}
+
+#laptop .perks {
+  margin-top: 70px;
+  width: 47%;
+}
+
+#laptop .perks .perk:nth-child(2) {
+  margin-top: 55px;
+}
+
+#laptop .perks .perk--title {
+  color: #1f3f5b;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+#laptop .perks .perk--details {
+  color: #4b5862;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 2rem;
+}
+
 #footer {
-  display: none;
+  background: #25252d;
+  border-radius: 0 100px 0 0;
+  padding: 80px 0;
+  width: 100%;
+}
+
+#footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 7%;
+  width: 75%;
+}
+
+#footer .nav__item {
+  color: white;
+}
+
+#footer .nav__item__heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 0.925;
+  margin-bottom: 35px;
+}
+
+#footer .nav__item__dropdown {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#footer .nav__item__dropdown--option {
+  opacity: 0.6;
+}
+
+#footer .nav__item__dropdown--option:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#footer .nav__item__dropdown--option:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */

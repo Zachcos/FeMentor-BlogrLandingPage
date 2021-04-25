@@ -273,7 +273,80 @@ html {
   }
 }
 
-#laptop,
+#laptop {
+  margin-top: 200px;
+  position: relative;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .graphic {
+    margin-right: 23%;
+    position: relative;
+    width: 30%;
+    img {
+      left: -415px;
+      position: relative;
+      top: -100px;
+    }
+  }
+  .perks {
+    margin-top: 70px;
+    width: 47%;
+    .perk {
+      &:nth-child(2) {
+        margin-top: 55px;
+      }
+      &--title {
+        color: $text__heading;
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 35px;
+      }
+      &--details {
+        color: $text__bodyCopy;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
 #footer {
-  display: none;
+  background: $bg__footer;
+  border-radius: 0 100px 0 0;
+  padding: 80px 0;
+  width: 100%;
+  .content {
+    display: flex;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 7%;
+    width: 75%;
+    &__item {
+      color: $text__white;
+      &__heading {
+        @include font__ubuntu(500);
+        font-size: 0.925;
+        margin-bottom: 35px;
+      }
+      &__dropdown {
+        @include font__ubuntu(400);
+        font-size: 0.9rem;
+        &--option {
+          opacity: 0.6;
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
