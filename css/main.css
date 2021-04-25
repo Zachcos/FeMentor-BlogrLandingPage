@@ -510,10 +510,29 @@ html {
   width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  #phones {
+    background-position: top -200% center, top center;
+    background-size: 150%, 100%;
+    height: 100%;
+    margin-top: 250px;
+    text-align: center;
+  }
+}
+
 #phones .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  #phones .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #phones .graphic {
@@ -524,6 +543,12 @@ html {
 
 #phones .graphic img {
   width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  #phones .graphic {
+    top: -150px;
+  }
 }
 
 #phones .perk {
@@ -543,6 +568,14 @@ html {
   width: 50%;
 }
 
+@media screen and (max-width: 1000px) {
+  #phones .perk {
+    width: 100%;
+    margin-left: 0;
+    margin-top: -100px;
+  }
+}
+
 #phones .perk--title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -554,6 +587,12 @@ html {
   font-weight: 200;
   letter-spacing: 0.5px;
   width: 95%;
+}
+
+@media screen and (max-width: 1000px) {
+  #phones .perk--details {
+    margin-bottom: 100px;
+  }
 }
 
 #laptop {
